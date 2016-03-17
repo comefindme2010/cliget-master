@@ -1,0 +1,86 @@
+{
+  "name": "cliget",
+  "title": "cliget",
+  "description": "Download protected files using curl, wget, or aria2",
+  "author": "Zaid Abdulla (http://zaidabdulla.com)",
+  "homepage": "https://github.com/zaidka/cliget",
+  "license": "MPL 2.0",
+  "version": "1.3.0-dev",
+  "id": "cliget@zaidabdulla.com",
+  "icon": "data/icon.png",
+  "icon64": "data/icon64.png",
+  "main": "lib/main.js",
+
+  "permissions": {"private-browsing": true},
+
+  "preferences" : [{
+    "name": "use_double_quotes",
+    "title": "Escape with double-quotes",
+    "description": "Use double quotation marks (\") for command-line arguments. Enable this if you plan to *execute* the commands on a Windows machine.",
+    "type": "bool",
+    "value": false
+  },
+  {
+    "name": "remove_accept_encoding",
+    "title": "Remove Accept-Encoding header",
+    "description": "Remove Accept-Encoding header from request headers to avoid compressed response from server.",
+    "type": "bool",
+    "value": true
+  },
+  {
+    "name": "curl",
+    "title": "cURL",
+    "description": "Generate cURL commands.",
+    "type": "bool",
+    "value": true
+  },
+  {
+    "name": "curl.options",
+    "title": "Extra cURL options",
+    "description": "Add extra command-line arguments to be appended to the cURL command.",
+    "type": "string",
+    "value": "-L"
+  },
+  {
+    "name": "wget",
+    "title": "Wget",
+    "description": "Generate Wget commands.",
+    "type": "bool",
+    "value": false
+  },
+  {
+    "name": "wget.options",
+    "title": "Extra Wget options",
+    "description": "Add extra command-line arguments to be appended to the Wget command.",
+    "type": "string",
+    "value": "-c"
+  },
+  {
+    "name": "aria2",
+    "title": "aria2",
+    "description": "Generate aria2 commands.",
+    "type": "bool",
+    "value": false
+  },
+  {
+    "name": "aria2.options",
+    "title": "Extra aria2 options",
+    "description": "Add extra command-line arguments to be appended to the aria2c command.",
+    "type": "string",
+    "value": "--async-dns=false --continue=true --file-allocation=none --max-connection-per-server=8"
+  },
+  {
+    "name": "youtube-dl",
+    "title": "youtube-dl",
+    "description": "Generate youtube-dl commands.",
+    "type": "bool",
+    "value": false
+  },
+  {
+    "name": "youtube-dl.options",
+    "title": "Extra youtube-dl options",
+    "description": "Add extra command-line arguments to be appended to the youtube-dl command.",
+    "type": "string",
+    "value": ""
+  }]
+}
